@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-percentage"></i></a>
+            <a href="#"><i class="fas fa-th-large"></i></a>
+            <a href="#"><i class="fas fa-list"></i></a>
+            <a href="#"><i class="fas fa-cog"></i></a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Food Items">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile">
+                    <span>Linda</span>
+                    <img src="https://via.placeholder.com/40" alt="User Avatar">
+                </div>
+            </div>
+
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <button data-category="all" class="active">
+                    <img src="image/bu1.jpg" alt="All Food"> All Food
+                </button>
+                <button data-category="pizza">
+                    <img src="image/pi2.jpg" alt="Pizza"> Pizza
+                </button>
+                <button data-category="burger">
+                    <img src="image/bu3.jpg" alt="Burger"> Burger
+                </button>
+                <button data-category="salad">
+                    <img src="image/sa2.jpg" alt="Salad"> Salad
+                </button>
+                <button data-category="drinks">
+                    <img src="image/j1.jpg" alt="Drinks"> Drinks
+                </button>
+                <button data-category="dessert">
+                    <img src="image/de1.jpg" alt="Desserts"> Desserts
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+            </div>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <div class="order-tabs">
+                <button class="active" data-tab="order">Order</button>
+                <button data-tab="order-history">Order History</button>
+                <button data-tab="delivery">Delivery</button>
+                <button data-tab="clear-all">Clear all</button>
+            </div>
+
+            <div class="order-items">
+            </div>
+
+            <div class="order-totals">
+                <p>Subtotal: <span class="subtotal">₹ 0.00</span></p>
+                <p>Tax (GST): <span class="tax">₹ 0.00</span></p>
+                <p>Discount: <span class="discount">₹ 0.00</span></p>
+                <p>Total: <span class="total">₹ 0.00</span></p>
+            </div>
+
+            <div class="payment-options">
+                <button data-payment="cash" class="active">Cash</button>
+                <button data-payment="debit">Debit</button>
+                <button data-payment="e-wallet">E-Wallet</button>
+            </div>
+
+            <button class="place-order-button">Place Order</button>
+        </div>
+
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
